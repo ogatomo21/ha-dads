@@ -1,0 +1,7 @@
+
+> ha-dads@1.0.0 check
+> node scripts/check.mjs
+
+PASS: YAML/CSS/変数/RGB/ダッシュボード、コントラスト 166組
+light: 文字最小 5.129:1、非テキスト最小 3.577:1
+dark: 文字最小 6.026:1、非テキスト最小 4.435:1

@@ -1,0 +1,16 @@
+
+> ha-dads@1.0.0 test
+> node --test
+
+✔ WCAG contrast: black/white, equal colors, symmetry (1.236ms)
+✔ YAML rejects duplicates at both outer and embedded CSS map levels (5.3511ms)
+✔ CSS variables resolve aliases and fallback, reject missing/cyclic references (0.2574ms)
+✔ theme and dashboard satisfy shipping checks in both modes (28.6837ms)
+ℹ tests 4
+ℹ suites 0
+ℹ pass 4
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 183.596

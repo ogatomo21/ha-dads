@@ -1,0 +1,92 @@
+# 新しい空のダッシュボードの「生の設定エディター」へ貼り付ける。
+# 下記のエンティティIDは例。READMEの置換表を参照。
+title: ホーム
+views:
+  - title: ホーム
+    path: home
+    icon: mdi:home-outline
+    type: sections
+    max_columns: 3
+    dense_section_placement: false
+    sections:
+      - type: grid
+        cards:
+          - type: heading
+            heading: 照明・電源
+            heading_style: title
+            icon: mdi:lightbulb-outline
+          - type: tile
+            entity: light.living_room
+            name: リビングの照明
+            grid_options:
+              columns: 12
+              rows: auto
+            features:
+              - type: light-brightness
+            tap_action:
+              action: more-info
+          - type: tile
+            entity: switch.desk_power
+            name: 書斎デスクの周辺機器用コンセント
+            grid_options:
+              columns: 12
+              rows: auto
+            tap_action:
+              action: more-info
+            features:
+              - type: toggle
+      - type: grid
+        cards:
+          - type: heading
+            heading: 室内環境
+            heading_style: title
+            icon: mdi:thermometer
+          - type: tile
+            entity: sensor.living_room_temperature
+            name: リビングの温度
+            grid_options:
+              columns: 12
+              rows: auto
+          - type: tile
+            entity: sensor.living_room_humidity
+            name: リビングの湿度
+            grid_options:
+              columns: 12
+              rows: auto
+          - type: tile
+            entity: climate.living_room
+            name: リビングのエアコン
+            grid_options:
+              columns: 12
+              rows: auto
+            tap_action:
+              action: more-info
+      - type: grid
+        cards:
+          - type: heading
+            heading: 履歴・状態
+            heading_style: title
+            icon: mdi:chart-line
+          - type: history-graph
+            title: 温度・湿度の推移
+            hours_to_show: 24
+            entities:
+              - entity: sensor.living_room_temperature
+                name: 温度
+              - entity: sensor.living_room_humidity
+                name: 湿度
+            grid_options:
+              columns: 12
+              rows: auto
+          - type: entities
+            title: 機器の状態
+            show_header_toggle: false
+            state_color: true
+            entities:
+              - entity: light.living_room
+                name: リビングの照明
+              - entity: switch.desk_power
+                name: デスクの電源
+            grid_options:
+              columns: 12
+              rows: auto

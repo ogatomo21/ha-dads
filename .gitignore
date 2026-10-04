@@ -1,0 +1,7 @@
+node_modules/
+.cache/
+.playwright-cli/
+output/playwright/
+preview/theme.css
+preview/card-styles.json
+

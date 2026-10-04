@@ -1,0 +1,353 @@
+# 出典: https://design.digital.go.jp/dads/ (v2.18.0)
+# Home Assistant向けに加工。ダーク配色は本プロジェクト独自の拡張。
+# 色値の出典・ライセンス: ../THIRD_PARTY_NOTICES.md
+DADS:
+  card-mod-theme: DADS
+
+  dads-font-family: '"Noto Sans JP", "Yu Gothic", "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif'
+  dads-radius: 8px
+  dads-space: 8px
+  dads-focus-yellow: "#ffd43d"
+  dads-focus-black: "#000000"
+  dads-focus-outline: 3px solid var(--dads-focus-black)
+  dads-focus-shadow: 0 0 0 2px var(--dads-focus-yellow)
+
+  primary-color: var(--dads-primary)
+  accent-color: var(--dads-primary)
+  dark-primary-color: var(--dads-primary-hover)
+  darker-primary-color: var(--dads-primary-active)
+  light-primary-color: var(--dads-selected)
+  primary-text-color: var(--dads-text)
+  secondary-text-color: var(--dads-text-secondary)
+  disabled-text-color: var(--dads-text-disabled)
+  text-primary-color: var(--dads-on-primary)
+  text-light-primary-color: var(--dads-text)
+  primary-background-color: var(--dads-background)
+  secondary-background-color: var(--dads-surface-secondary)
+  card-background-color: var(--dads-surface)
+  clear-background-color: var(--dads-surface)
+  divider-color: var(--dads-border)
+  outline-color: var(--dads-border)
+  outline-hover-color: var(--dads-text-secondary)
+  error-color: var(--dads-error)
+  warning-color: var(--dads-warning)
+  success-color: var(--dads-success)
+  info-color: var(--dads-primary)
+  scrollbar-thumb-color: var(--dads-border)
+
+  app-header-background-color: var(--dads-surface)
+  app-header-text-color: var(--dads-text)
+  app-header-selection-bar-color: var(--dads-primary)
+  sidebar-background-color: var(--dads-surface)
+  sidebar-text-color: var(--dads-text)
+  sidebar-icon-color: var(--dads-text-secondary)
+  sidebar-selected-text-color: var(--dads-primary)
+  sidebar-selected-icon-color: var(--dads-primary)
+
+  ha-card-background: var(--dads-surface)
+  ha-card-border-color: var(--dads-border)
+  ha-card-border-width: 1px
+  ha-card-border-radius: var(--dads-radius)
+  ha-card-box-shadow: none
+  ha-card-header-font-size: var(--ha-font-size-xl)
+  ha-card-header-font-family: var(--dads-font-family)
+  ha-button-border-radius: var(--dads-radius)
+  ha-section-border-radius: var(--dads-radius)
+  ha-section-background-color: var(--dads-surface-secondary)
+  ha-dialog-border-radius: var(--dads-radius)
+  ha-dialog-surface-background: var(--dads-surface-elevated)
+  dialog-box-shadow: var(--dads-dialog-shadow)
+  mdc-dialog-scrim-color: rgba(0, 0, 0, 0.6)
+  mdc-theme-surface: var(--dads-surface-elevated)
+  mdc-theme-background: var(--dads-background)
+  mdc-theme-primary: var(--dads-primary)
+  mdc-theme-on-primary: var(--dads-on-primary)
+  mdc-theme-on-surface: var(--dads-text)
+  mdc-button-outline-color: var(--dads-border)
+  mdc-shape-small: var(--dads-radius)
+  mdc-shape-medium: var(--dads-radius)
+  mdc-typography-font-family: var(--dads-font-family)
+  paper-font-common-base_-_font-family: var(--dads-font-family)
+  paper-input-container-color: var(--dads-text-secondary)
+  paper-input-container-input-color: var(--dads-text)
+  paper-input-container-focus-color: var(--dads-primary)
+
+  ha-font-family-body: var(--dads-font-family)
+  ha-font-family-heading: var(--dads-font-family)
+  ha-font-family-longform: var(--dads-font-family)
+  # HAの文字サイズスライダーと組み合わせられるようscaleを維持する。
+  ha-font-size-xs: calc(12px * var(--ha-font-size-scale, 1))
+  ha-font-size-s: calc(14px * var(--ha-font-size-scale, 1))
+  ha-font-size-m: calc(16px * var(--ha-font-size-scale, 1))
+  ha-font-size-l: calc(18px * var(--ha-font-size-scale, 1))
+  ha-font-size-xl: calc(20px * var(--ha-font-size-scale, 1))
+  ha-font-size-2xl: calc(24px * var(--ha-font-size-scale, 1))
+  ha-line-height-normal: 1.6
+  ha-tile-info-secondary-color: var(--dads-text-secondary)
+  ha-border-radius-sm: var(--dads-radius)
+  ha-border-radius-md: var(--dads-radius)
+  ha-view-sections-row-gap: 24px
+  ha-view-sections-column-gap: 24px
+  ha-view-sections-narrow-column-gap: 8px
+
+  # HA 2026.9のWeb Awesome系コンポーネント用。
+  ha-color-text-primary: var(--dads-text)
+  ha-color-text-secondary: var(--dads-text-secondary)
+  ha-color-text-disabled: var(--dads-text-disabled)
+  ha-color-text-link: var(--dads-primary)
+  ha-color-focus: var(--dads-focus-black)
+  ha-color-border-neutral-quiet: var(--dads-border)
+  ha-color-border-neutral-normal: var(--dads-border)
+  ha-color-border-neutral-loud: var(--dads-text-secondary)
+  ha-color-border-primary-quiet: var(--dads-primary)
+  ha-color-border-primary-normal: var(--dads-primary)
+  ha-color-border-primary-loud: var(--dads-primary)
+  ha-color-border-success-loud: var(--dads-success)
+  ha-color-border-success-normal: var(--dads-success)
+  ha-color-border-success-quiet: var(--dads-success)
+  ha-color-border-warning-loud: var(--dads-warning)
+  ha-color-border-warning-normal: var(--dads-warning)
+  ha-color-border-warning-quiet: var(--dads-warning)
+  ha-color-border-danger-loud: var(--dads-error)
+  ha-color-border-danger-normal: var(--dads-error)
+  ha-color-border-danger-quiet: var(--dads-error)
+  ha-color-fill-primary-quiet-resting: var(--dads-surface)
+  ha-color-fill-primary-quiet-hover: var(--dads-selected)
+  ha-color-fill-primary-quiet-active: var(--dads-selected)
+  ha-color-fill-primary-normal-resting: var(--dads-selected)
+  ha-color-fill-primary-normal-hover: var(--dads-selected)
+  ha-color-fill-primary-normal-active: var(--dads-selected)
+  ha-color-fill-primary-loud-resting: var(--dads-primary)
+  ha-color-fill-primary-loud-hover: var(--dads-primary-hover)
+  ha-color-fill-primary-loud-active: var(--dads-primary-active)
+  ha-color-on-primary-quiet: var(--dads-primary)
+  ha-color-on-primary-normal: var(--dads-primary)
+  ha-color-on-primary-loud: var(--dads-on-primary)
+  ha-color-fill-success-quiet-resting: var(--dads-surface)
+  ha-color-fill-success-quiet-hover: var(--dads-surface-secondary)
+  ha-color-fill-success-quiet-active: var(--dads-surface-secondary)
+  ha-color-fill-success-normal-resting: var(--dads-surface-secondary)
+  ha-color-fill-success-normal-hover: var(--dads-surface-secondary)
+  ha-color-fill-success-normal-active: var(--dads-surface-secondary)
+  ha-color-fill-success-loud-resting: var(--dads-success)
+  ha-color-fill-success-loud-hover: var(--dads-success)
+  ha-color-fill-success-loud-active: var(--dads-success)
+  ha-color-on-success-quiet: var(--dads-success)
+  ha-color-on-success-normal: var(--dads-success)
+  ha-color-on-success-loud: var(--dads-surface)
+  ha-color-fill-warning-quiet-resting: var(--dads-surface)
+  ha-color-fill-warning-quiet-hover: var(--dads-surface-secondary)
+  ha-color-fill-warning-quiet-active: var(--dads-surface-secondary)
+  ha-color-fill-warning-normal-resting: var(--dads-surface-secondary)
+  ha-color-fill-warning-normal-hover: var(--dads-surface-secondary)
+  ha-color-fill-warning-normal-active: var(--dads-surface-secondary)
+  ha-color-fill-warning-loud-resting: var(--dads-warning)
+  ha-color-fill-warning-loud-hover: var(--dads-warning)
+  ha-color-fill-warning-loud-active: var(--dads-warning)
+  ha-color-on-warning-quiet: var(--dads-warning)
+  ha-color-on-warning-normal: var(--dads-warning)
+  ha-color-on-warning-loud: var(--dads-surface)
+  ha-color-fill-danger-quiet-resting: var(--dads-surface)
+  ha-color-fill-danger-quiet-hover: var(--dads-surface-secondary)
+  ha-color-fill-danger-quiet-active: var(--dads-surface-secondary)
+  ha-color-fill-danger-normal-resting: var(--dads-surface-secondary)
+  ha-color-fill-danger-normal-hover: var(--dads-surface-secondary)
+  ha-color-fill-danger-normal-active: var(--dads-surface-secondary)
+  ha-color-fill-danger-loud-resting: var(--dads-error)
+  ha-color-fill-danger-loud-hover: var(--dads-error)
+  ha-color-fill-danger-loud-active: var(--dads-error)
+  ha-color-on-danger-quiet: var(--dads-error)
+  ha-color-on-danger-normal: var(--dads-error)
+  ha-color-on-danger-loud: var(--dads-surface)
+  ha-color-fill-neutral-quiet-resting: var(--dads-surface)
+  ha-color-fill-neutral-quiet-hover: var(--dads-surface-secondary)
+  ha-color-fill-neutral-quiet-active: var(--dads-surface-secondary)
+  ha-color-fill-neutral-normal-resting: var(--dads-surface-secondary)
+  ha-color-fill-neutral-normal-hover: var(--dads-surface-secondary)
+  ha-color-fill-neutral-normal-active: var(--dads-surface-secondary)
+  ha-color-fill-neutral-loud-resting: var(--dads-text-secondary)
+  ha-color-fill-neutral-loud-hover: var(--dads-text)
+  ha-color-fill-neutral-loud-active: var(--dads-text)
+  ha-color-on-neutral-quiet: var(--dads-text)
+  ha-color-on-neutral-normal: var(--dads-text)
+  ha-color-on-neutral-loud: var(--dads-surface)
+  ha-color-on-disabled-quiet: var(--dads-text-disabled)
+  ha-color-on-disabled-normal: var(--dads-text-disabled)
+  ha-color-on-disabled-loud: var(--dads-text-disabled)
+  ha-color-fill-disabled-normal-resting: var(--dads-surface-secondary)
+  ha-color-fill-disabled-loud-resting: var(--dads-surface-secondary)
+  ha-color-form-background: var(--dads-surface)
+  ha-color-form-background-hover: var(--dads-surface-secondary)
+  ha-color-form-background-disabled: var(--dads-surface-secondary)
+  wa-focus-ring: var(--dads-focus-outline)
+  wa-focus-ring-offset: 2px
+  wa-form-control-border-radius: var(--dads-radius)
+
+  card-mod-card-yaml: |
+    .: |
+      :host { min-width: 0; }
+      ha-card {
+        border: 1px solid var(--dads-border);
+        border-radius: var(--dads-radius);
+        box-shadow: none;
+        font-family: var(--dads-font-family);
+      }
+      a:focus-visible, button:focus-visible, [tabindex]:focus-visible,
+      ha-tile-icon:focus-visible, ha-tile-info:focus-visible {
+        outline: var(--dads-focus-outline) !important;
+        outline-offset: 2px;
+        box-shadow: var(--dads-focus-shadow) !important;
+      }
+      @media (prefers-reduced-motion: reduce) {
+        ha-card { transition: none; }
+      }
+    ha-tile-info$: |
+      ::slotted([slot="primary"]), ::slotted([slot="secondary"]) {
+        white-space: normal;
+        overflow-wrap: anywhere;
+        overflow: visible;
+        text-overflow: clip;
+      }
+    ha-tile-container$: |
+      .content { padding: 8px 16px; gap: 16px; }
+      [role="button"]:focus-visible {
+        outline: var(--dads-focus-outline) !important;
+        outline-offset: 2px;
+        box-shadow: var(--dads-focus-shadow) !important;
+      }
+    ha-markdown$: |
+      h1, h2, h3, p, li { overflow-wrap: anywhere; }
+      a { color: var(--dads-primary); text-underline-offset: 0.2em; }
+      a:focus-visible {
+        outline: var(--dads-focus-outline);
+        outline-offset: 2px;
+        box-shadow: var(--dads-focus-shadow);
+      }
+    ha-button$: |
+      .button:focus-visible {
+        outline: var(--dads-focus-outline) !important;
+        outline-offset: 2px;
+        box-shadow: var(--dads-focus-shadow) !important;
+      }
+    ha-icon-button$: |
+      button:focus-visible {
+        outline: var(--dads-focus-outline) !important;
+        outline-offset: 2px;
+        box-shadow: var(--dads-focus-shadow) !important;
+      }
+    ha-card$: |
+      .card-header {
+        font-weight: 700;
+        line-height: 1.6;
+        overflow-wrap: anywhere;
+      }
+
+  card-mod-sidebar-yaml: |
+    .: |
+      :host { border-inline-end: 1px solid var(--dads-border); }
+      ha-list-item-button.selected {
+        background: var(--dads-selected);
+        border-radius: var(--dads-radius);
+      }
+      ha-list-item-button.selected::before { opacity: 0; }
+      ha-list-item-button:focus-visible {
+        outline: var(--dads-focus-outline) !important;
+        outline-offset: 2px;
+        box-shadow: var(--dads-focus-shadow) !important;
+      }
+    ha-list-item-button$: |
+      :host(:focus-within) {
+        outline: var(--dads-focus-outline);
+        outline-offset: 2px;
+        box-shadow: var(--dads-focus-shadow);
+      }
+
+  card-mod-root: |
+    .header {
+      border-bottom: 1px solid var(--dads-border);
+      box-shadow: none;
+    }
+
+  card-mod-top-app-bar-fixed: |
+    .top-app-bar {
+      border-bottom: 1px solid var(--dads-border);
+      box-shadow: none;
+    }
+
+  card-mod-config: |
+    :host {
+      background: var(--dads-background);
+      color: var(--dads-text);
+      font-family: var(--dads-font-family);
+    }
+
+  # 20260826.7のha-dialogはwa-dialog::part(dialog)を使用する。
+  card-mod-dialog: &dialog-style |
+    wa-dialog::part(dialog) {
+      border: 1px solid var(--dads-border);
+      background: var(--dads-surface-elevated);
+    }
+    ha-button:focus-visible, button:focus-visible, a:focus-visible {
+      outline: var(--dads-focus-outline) !important;
+      outline-offset: 2px;
+      box-shadow: var(--dads-focus-shadow) !important;
+    }
+  card-mod-more-info: *dialog-style
+
+  modes:
+    light:
+      dads-background: "#f2f2f2"
+      dads-surface: "#ffffff"
+      dads-surface-secondary: "#f2f2f2"
+      dads-surface-elevated: "#ffffff"
+      dads-text: "#1a1a1a"
+      dads-text-secondary: "#666666"
+      dads-text-disabled: "#666666"
+      dads-border: "#7f7f7f"
+      dads-primary: "#0017c1"
+      dads-primary-hover: "#00118f"
+      dads-primary-active: "#000071"
+      dads-on-primary: "#ffffff"
+      dads-selected: "#e8f1fe"
+      dads-success: "#115a36"
+      dads-warning: "#ac3e00"
+      dads-error: "#ce0000"
+      dads-dialog-shadow: 0 2px 8px rgba(0, 0, 0, 0.16)
+      rgb-primary-color: 0, 23, 193
+      rgb-accent-color: 0, 23, 193
+      rgb-primary-text-color: 26, 26, 26
+      rgb-secondary-text-color: 102, 102, 102
+      rgb-text-primary-color: 255, 255, 255
+      rgb-card-background-color: 255, 255, 255
+      rgb-error-color: 206, 0, 0
+      rgb-warning-color: 172, 62, 0
+      rgb-success-color: 17, 90, 54
+      rgb-info-color: 0, 23, 193
+    dark:
+      dads-background: "#000000"
+      dads-surface: "#1a1a1a"
+      dads-surface-secondary: "#333333"
+      dads-surface-elevated: "#333333"
+      dads-text: "#f2f2f2"
+      dads-text-secondary: "#cccccc"
+      dads-text-disabled: "#b3b3b3"
+      dads-border: "#999999"
+      dads-primary: "#9db7f9"
+      dads-primary-hover: "#c5d7fb"
+      dads-primary-active: "#d9e6ff"
+      dads-on-primary: "#000060"
+      dads-selected: "#000060"
+      dads-success: "#71c598"
+      dads-warning: "#ffa66d"
+      dads-error: "#ff9696"
+      dads-dialog-shadow: none
+      rgb-primary-color: 157, 183, 249
+      rgb-accent-color: 157, 183, 249
+      rgb-primary-text-color: 242, 242, 242
+      rgb-secondary-text-color: 204, 204, 204
+      rgb-text-primary-color: 0, 0, 96
+      rgb-card-background-color: 26, 26, 26
+      rgb-error-color: 255, 150, 150
+      rgb-warning-color: 255, 166, 109
+      rgb-success-color: 113, 197, 152
+      rgb-info-color: 157, 183, 249

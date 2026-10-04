@@ -1,0 +1,55 @@
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--primary-background-color);
+  color: var(--primary-text-color);
+  font-family: var(--ha-font-family-body);
+  font-size: var(--ha-font-size-m);
+  line-height: 1.6;
+}
+header {
+  background: var(--app-header-background-color);
+  color: var(--app-header-text-color);
+  border-bottom: 1px solid var(--dads-border);
+  padding: 16px 24px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+.header-title { font-size: var(--ha-font-size-xl); font-weight: 700; }
+.header-title span { display: block; font-size: var(--ha-font-size-s); color: var(--secondary-text-color); }
+.controls { display: flex; flex-wrap: wrap; gap: 16px; }
+label { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+select {
+  font: inherit;
+  min-height: 44px;
+  max-width: 100%;
+  padding: 8px;
+  border: 1px solid var(--dads-border);
+  border-radius: var(--dads-radius);
+  background: var(--dads-surface);
+  color: var(--dads-text);
+}
+select:focus-visible {
+  outline: var(--dads-focus-outline);
+  outline-offset: 2px;
+  box-shadow: var(--dads-focus-shadow);
+}
+main { max-width: 1120px; margin: 0 auto; padding: 24px; }
+.preview-note { font-size: var(--ha-font-size-s); color: var(--secondary-text-color); margin: 0 0 24px; }
+h1 { margin: 0; font-size: var(--ha-font-size-2xl); }
+h2 { margin: 0 0 16px; font-size: var(--ha-font-size-xl); }
+.page-heading { margin-bottom: 24px; }
+.page-heading p { color: var(--secondary-text-color); }
+.sections { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
+.sections section { min-width: 0; }
+.attribution { color: var(--secondary-text-color); font-size: var(--ha-font-size-s); margin-top: 32px; }
+p, h1, h2, label { overflow-wrap: anywhere; }
+@media (max-width: 1000px) { .sections { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 700px) {
+  .sections { grid-template-columns: minmax(0, 1fr); }
+  header { padding: 16px; }
+  main { padding: 24px 16px; }
+}

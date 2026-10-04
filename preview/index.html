@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="ja" data-mode="light">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>DADS テーマプレビュー</title>
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="theme.css">
+    <link rel="stylesheet" href="preview.css">
+    <script src="preview.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <div class="header-title">DADS <span>Home Assistant テーマ</span></div>
+      <div class="controls">
+        <label>配色 <select id="mode"><option value="auto">端末に合わせる</option><option value="light">ライト</option><option value="dark">ダーク</option></select></label>
+        <label>文字サイズ <select id="scale"><option value="1">100%</option><option value="2">200%</option></select></label>
+      </div>
+    </header>
+    <main>
+      <p class="preview-note">テーマの配色とCSS補正を確認するローカルプレビューです。HAのカード・レイアウトはテスト用の近似であり、実HAでの動作証明にはなりません。</p>
+      <div class="page-heading"><h1>ホーム</h1><p>照明、室内環境、機器の状態を確認できます。</p></div>
+      <div class="sections">
+        <section aria-labelledby="power-title">
+          <h2 id="power-title">照明・電源</h2>
+          <dads-fixture kind="power"></dads-fixture>
+        </section>
+        <section aria-labelledby="room-title">
+          <h2 id="room-title">室内環境</h2>
+          <dads-fixture kind="room"></dads-fixture>
+        </section>
+        <section aria-labelledby="status-title">
+          <h2 id="status-title">状態・お知らせ</h2>
+          <dads-fixture kind="status"></dads-fixture>
+        </section>
+      </div>
+      <p class="attribution">デジタル庁デザインシステムをもとにTomoya Ogawaが加工して作成。ダーク配色は独自の拡張です。</p>
+    </main>
+  </body>
+</html>

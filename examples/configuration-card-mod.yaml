@@ -1,0 +1,7 @@
+# CSS補正を有効にする場合のfrontend全体の例。既存のfrontendへマージする。
+frontend:
+  themes: !include_dir_merge_named themes
+  extra_module_url:
+    # 設定 > ダッシュボード > リソースの実際のURLを、そのままコピーする。
+    # 下記は例示用。YOUR_ACTUAL_HACSTAGは置換必須。
+    - /hacsfiles/lovelace-card-mod/card-mod.js?hacstag=YOUR_ACTUAL_HACSTAG

@@ -1,0 +1,21 @@
+{
+  "name": "ha-dads",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Home Assistant向けデジタル庁デザインシステムベースのテーマ",
+  "type": "module",
+  "license": "MIT",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "check": "node scripts/check.mjs",
+    "test": "node --test",
+    "preview": "node scripts/preview.mjs",
+    "preview:build": "node scripts/preview.mjs --build"
+  },
+  "devDependencies": {
+    "postcss": "8.5.28",
+    "yaml": "2.9.1"
+  }
+}
