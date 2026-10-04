@@ -263,9 +263,14 @@ DADS:
       }
 
   card-mod-root: |
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap');
+    :host {
+      font-family: var(--dads-font-family) !important;
+    }
     .header {
       border-bottom: 1px solid var(--dads-border);
       box-shadow: none;
+      font-family: var(--dads-font-family);
     }
 
   card-mod-top-app-bar-fixed: |
