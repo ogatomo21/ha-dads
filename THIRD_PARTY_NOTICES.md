@@ -41,6 +41,15 @@ SOFTWARE.
 
 ## 実行時の外部依存
 
+Noto Sans JPはGoogle Fontsから実行時に読み込みます。フォントデータはこのプロジェクトに同梱しません。フォント本体は本プロジェクトのMIT Licenseの対象外です。
+
+- Font: Noto Sans JP
+- Source: https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap
+- Upstream: https://github.com/google/fonts/tree/main/ofl/notosansjp
+- License: [SIL Open Font License 1.1](https://github.com/google/fonts/blob/main/ofl/notosansjp/OFL.txt)
+
+Google FontsのCSSをStylesheetリソースとして登録します。CSSはfonts.googleapis.com、フォント本体はfonts.gstatic.comから読み込みます。専用JSやフォントデータの同梱はありません。[設定方法](docs/fonts.md)
+
 card-modは利用者が別途HACSから導入します。このプロジェクトにはcard-mod本体を再配布していません。
 
 - https://github.com/thomasloven/lovelace-card-mod

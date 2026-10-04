@@ -36,7 +36,7 @@
 | 通知・異常 | `success-color`, `warning-color`, `error-color`, `info-color` |
 | ナビゲーション | `sidebar-*`, `app-header-*` |
 | ダイアログ | `ha-dialog-surface-background`, `ha-dialog-border-radius`, `dialog-box-shadow` |
-| 書体 | `ha-font-family-body`, `ha-font-family-heading`, `ha-font-family-longform`, `mdc-typography-font-family` |
+| 書体 | `dads-font-family`=`"Noto Sans JP", sans-serif`、`ha-font-family-body`, `ha-font-family-heading`, `ha-font-family-longform`, `mdc-typography-font-family` |
 | 大きさ・行高 | `ha-font-size-m`=16px×HAスケール, `ha-line-height-normal`=1.6 |
 | 形状 | `ha-card-border-radius`, `ha-button-border-radius`, `ha-section-border-radius`=8px |
 | 余白 | Sectionsの列間・行間24px、狭幅余白8px、タイル内部8px/16px |
@@ -44,3 +44,5 @@
 HAの`state-*`、ドメイン／device_class別状態色、エネルギー色、グラフ系列色は上書きしません。ON/OFFやエラーの意味を保ち、色だけに頼らない標準の状態ラベルも残します。これらの標準色に対するコントラストは本テーマの静的チェック対象外です。
 
 本文は16pxを基準としますが、補助テキストは14px、一部の小さな注記は12pxです。標準コンポーネント内の固定px指定は完全には変更できません。フォントスケールを固定しないのでHAの文字サイズ設定と併用できます。
+
+Noto Sans JPは[Stylesheetリソース](fonts.md)としてGoogle Fontsから読み込みます。端末のOS書体への優先フォールバックは廃止しています。読み込み中・失敗時・未収録文字の代替として汎用`sans-serif`は残します。

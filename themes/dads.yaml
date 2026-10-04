@@ -4,7 +4,7 @@
 DADS:
   card-mod-theme: DADS
 
-  dads-font-family: '"Noto Sans JP", "Yu Gothic", "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif'
+  dads-font-family: '"Noto Sans JP", sans-serif'
   dads-radius: 8px
   dads-space: 8px
   dads-focus-yellow: "#ffd43d"

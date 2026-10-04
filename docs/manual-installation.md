@@ -40,4 +40,6 @@ action: frontend.reload_themes
 
 プロフィールでDADSとライト／ダークのモードを選択します。CSS補正も利用する場合は[card-modの手順](card-mod.md)へ進みます。
 
+Noto Sans JPの固定表示には[Google Fontsの読み込み](fonts.md)も設定してください。
+
 元に戻すには標準テーマを選びます。設定変更で起動できない場合は、保存した`configuration.yaml`を元の場所へコピーして戻します。

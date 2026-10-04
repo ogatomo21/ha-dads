@@ -2,6 +2,8 @@
 
 Node.js 22以上を使用します。HAへのテーマ導入にnpmは不要です。
 
+Noto Sans JPはプレビューでもGoogle Fontsから読み込みます。ブラウザー検証にはGoogle Fontsへ通信できる環境が必要です。静的検証と単体テストはネットワーク不要です。
+
 ```powershell
 Set-Location 'C:\ogatomo\codex_temp\ha-dads'
 npm.cmd ci --ignore-scripts

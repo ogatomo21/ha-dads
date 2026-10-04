@@ -1,10 +1,10 @@
 # DADS — Home Assistant テーマ
 
-デジタル庁デザインシステムを基にした、ライト／ダーク対応のHome Assistantテーマです。BlueとGrayを中心に、読みやすい文字・控えめな角丸を使います。アイコンはHA内蔵MDI、フォントは端末にあるNoto Sans JPとOSの日本語書体を使用します。
+デジタル庁デザインシステムを基にした、ライト／ダーク対応のHome Assistantテーマです。BlueとGrayを中心に、読みやすい文字・控えめな角丸を使います。アイコンはHA内蔵MDI、書体は**Google FontsのNoto Sans JP**を使用します。
 
 **基本テーマはHACSで導入・更新できます。** card-modを追加すると、カードの余白・長いラベルの折り返し・黄色と黒のフォーカス表示などのCSS補正も有効になります。
 
-> 配布準備中：この作業ではGitHubへの公開は行っていません。以下のボタンとURLは、`ogatomo21/ha-dads`として公開した後に使用するものです。別のリポジトリ名で公開する場合は変更してください。
+**フォントは管理画面でGoogle FontsのURLを一度追加するだけです。** 専用JS、フォントファイルのコピー、フォント用のYAML編集は不要です。[フォント設定を開く](https://my.home-assistant.io/redirect/lovelace_resources/)
 
 [![HACSでDADS Themeを開く](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=ogatomo21&repository=ha-dads&category=theme)
 
@@ -12,16 +12,16 @@
 
 Home Assistant **2026.9.4以上**と[HACS](https://www.hacs.xyz/docs/use/)を使用します。npmやファイルの手動コピーは不要です。
 
-### 1. テーマの読み込みを有効にする（初回のみ）
+### 1. テーマの読み込みを設定する（初回のみ）
 
-すでにテーマを使っていて、次の設定がある場合はこの手順を飛ばせます。初めての場合は`configuration.yaml`をバックアップし、既存の`frontend`へ次をマージして設定チェック後にHAを再起動します。
+すでにテーマを使っている場合はこの手順を省けます。初めての場合は`configuration.yaml`をバックアップし、既存の`frontend`へ次をマージして設定チェック後にHAを再起動します。
 
 ```yaml
 frontend:
   themes: !include_dir_merge_named themes
 ```
 
-`frontend`を二重に定義したり、既存の設定全体を置き換えたりしないでください。[最小設定例](examples/configuration.yaml)も参照できます。テーマの有効化は[HACSの公式手順](https://www.hacs.xyz/docs/use/repositories/type/theme/)と共通です。
+`frontend`を二重に定義したり、既存の設定全体を置き換えたりしないでください。card-mod等の既存モジュールも残します。[設定例](examples/configuration.yaml)を参照できます。テーマの有効化は[HACSの公式手順](https://www.hacs.xyz/docs/use/repositories/type/theme/)と共通です。
 
 ### 2. HACSでダウンロード
 
@@ -33,9 +33,19 @@ frontend:
 
 HACSの標準一覧への掲載は別の申請が必要です。掲載前は上記のカスタムリポジトリ登録を利用します。[公式の登録手順](https://www.hacs.xyz/docs/faq/custom_repositories/)
 
-### 3. DADSを選択
+### 3. Google Fontsを一度登録してDADSを選択
+
+1. [ダッシュボードのリソース](https://my.home-assistant.io/redirect/lovelace_resources/)を開き、**リソースを追加**を押します。
+2. 次のURLを貼り、種類を **Stylesheet（スタイルシート）** にして保存します。
+3. ブラウザーを強制再読み込みして、一度ダッシュボードを開きます。フォント登録のためのHA再起動は不要です。
+
+```text
+https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap
+```
 
 プロフィールのテーマを **DADS** に変更し、モードを「ライト」「ダーク」またはシステム設定への追従にします。基本の配色・書体・カード形状はこれで適用されます。
+
+フォントは端末ごと・カードごとに登録する必要はありません。ダッシュボードで読み込んだ後は同じ画面セッションのサイドバー・設定画面・詳細ダイアログも利用できます。設定画面へ直接アクセスした場合などの制約と、以前のモジュール版からの移行は[フォント設定](docs/fonts.md)に記載しています。
 
 HACSはダウンロード後にテーマを再読み込みします。選択肢に出ない場合は、開発者ツールのアクションで`frontend.reload_themes`を実行し、ページを再読み込みしてください。
 
@@ -52,7 +62,7 @@ HACSの保存先は通常`/config/themes/dads/dads.yaml`です。ファイルを
 
 HACSで **card-mod** を導入すると、テーマに同梱したCSS補正が適用されます。標準テーマ変数だけでは届かないタイル文字の折り返し、サイドバー・ヘッダー・ダイアログ等を補正します。
 
-設定画面にも適用するには`extra_module_url`の追加が必要です。詳細は[card-modの設定手順](docs/card-mod.md)を参照してください。追加カスタムカード・独自JSモジュール・外部フォントは不要です。
+設定画面にもCSS補正を適用するにはcard-modのURLを`extra_module_url`へ追加します。詳細は[card-modの設定手順](docs/card-mod.md)を参照してください。フォントのリソース登録とcard-modを併用でき、追加カスタムカードは不要です。
 
 ## プレビュー
 
@@ -60,7 +70,7 @@ HACSで **card-mod** を導入すると、テーマに同梱したCSS補正が�
 
 | ライト | ダーク |
 | --- | --- |
-| ![ライトモードのローカルプレビュー](assets/preview-light.png) | ![ダークモードのローカルプレビュー](assets/preview-dark.png) |
+| ![ライトモードのローカルプレビュー](assets/preview-light.jpg) | ![ダークモードのローカルプレビュー](assets/preview-dark.jpg) |
 
 ## ダッシュボード例
 

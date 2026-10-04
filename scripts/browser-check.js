@@ -4,6 +4,13 @@ async (page) => {
   page.on('pageerror', error => errors.push(error.message));
   await page.goto('http://127.0.0.1:4173');
   await page.waitForFunction(() => document.documentElement.dataset.ready === 'true');
+  await page.waitForFunction(() => [...document.fonts].some(face => face.family.includes('Noto Sans JP')));
+  const fonts = await page.evaluate(async () => {
+    const faces = await document.fonts.load('400 16px "Noto Sans JP"', '日本語ABC123');
+    await document.fonts.ready;
+    return { family: getComputedStyle(document.body).fontFamily, loadedFaces: faces.length, status: document.fonts.status };
+  });
+  if (!fonts.family.startsWith('"Noto Sans JP"') || !fonts.loadedFaces || fonts.status !== 'loaded') throw new Error(`Webフォント読み込み: ${JSON.stringify(fonts)}`);
   const results = [];
   for (const mode of ['light', 'dark']) {
     await page.getByRole('combobox', { name: '配色', exact: true }).selectOption(mode);
@@ -60,6 +67,6 @@ async (page) => {
   if (!focus?.visible || !focus.outline.includes('3px') || !focus.outline.includes('rgb(0, 0, 0)') || !focus.boxShadow.includes('rgb(255, 212, 61)')) throw new Error(`二重フォーカス: ${JSON.stringify(focus)}`);
   await page.screenshot({ path: `${directory}/keyboard-focus.png`, fullPage: true });
   if (errors.length) throw new Error(errors.join('\n'));
-  const report = { scope: 'Standalone preview only; not Home Assistant', engine: 'Chromium', cases: results, focus, interactions: 'light/power toggles, disabled action, system light/dark: PASS', pageErrors: errors };
+  const report = { scope: 'Standalone preview only; not Home Assistant', engine: 'Chromium', fonts, cases: results, focus, interactions: 'light/power toggles, disabled action, system light/dark: PASS', pageErrors: errors };
   return report;
 }

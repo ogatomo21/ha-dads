@@ -1,6 +1,6 @@
 # GitHub配布とHACS検証
 
-このフォルダはHACSの **Theme** カテゴリー向けに構成しています。今回の作業では公開・push・Release作成は行っていません。ローカルファイルだけではHACSからダウンロードできず、[公開GitHubリポジトリ](https://www.hacs.xyz/docs/publish/start/)が必要です。
+このフォルダはHACSの **Theme** カテゴリー向けに構成しています。配布先は`ogatomo21/ha-dads`です。今回の変更はローカルで作成しており、push・Release作成は行っていません。HACS配布には[公開GitHubリポジトリ](https://www.hacs.xyz/docs/publish/start/)が必要です。
 
 ## 公開先と構成
 
@@ -16,8 +16,8 @@ README.md
 LICENSE
 THIRD_PARTY_NOTICES.md
 assets/
-  preview-light.png
-  preview-dark.png
+  preview-light.jpg
+  preview-dark.jpg
 .github/workflows/
   check.yml
   hacs.yml
@@ -26,6 +26,8 @@ assets/
 開発用の`docs`・`examples`・`scripts`・`test`・`preview`・npmのファイルも公開できます。`.gitignore`に従い、`node_modules`・参照キャッシュ・生成したプレビューCSS等は含めません。HACSのテーマ保存先は通常`/config/themes/dads/dads.yaml`で、インストール対象はテーマ本体です。card-modは別途導入し、ダッシュボード例は自動登録しません。
 
 `themes`には配布用YAMLを1つだけ置き、ライト／ダークをその`modes`にまとめます。[HACSテーマ構造の仕様](https://www.hacs.xyz/docs/publish/theme/)
+
+フォントはGoogle FontsのStylesheetリソースで読み込みます。フォントファイルや専用JSの公開は不要です。[設定方法](fonts.md)
 
 ## GitHub側の設定
 
