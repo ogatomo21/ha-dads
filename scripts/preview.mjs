@@ -12,6 +12,7 @@ if (process.argv.includes('--build')) {
   const files = new Map([
     ['/', ['preview/index.html', 'text/html; charset=utf-8']],
     ['/preview.css', ['preview/preview.css', 'text/css; charset=utf-8']],
+    ['/dads-fonts.css', ['css/dads-fonts.css', 'text/css; charset=utf-8']],
     ['/theme.css', ['preview/theme.css', 'text/css; charset=utf-8']],
     ['/preview.js', ['preview/preview.js', 'text/javascript; charset=utf-8']],
     ['/card-styles.json', ['preview/card-styles.json', 'application/json']],

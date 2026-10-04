@@ -12,6 +12,8 @@ READMEのボタンは`https://github.com/ogatomo21/ha-dads`を配布先として
 hacs.json
 themes/
   dads.yaml
+css/
+  dads-fonts.css
 README.md
 LICENSE
 THIRD_PARTY_NOTICES.md
@@ -27,7 +29,7 @@ assets/
 
 `themes`には配布用YAMLを1つだけ置き、ライト／ダークをその`modes`にまとめます。[HACSテーマ構造の仕様](https://www.hacs.xyz/docs/publish/theme/)
 
-フォントはGoogle FontsのStylesheetリソースで読み込みます。フォントファイルや専用JSの公開は不要です。[設定方法](fonts.md)
+`css/dads-fonts.css`も公開対象です。Google Fontsを読み込み、HAの本文の継承元を補正します。フォントファイルや専用JSの公開は不要です。[設定方法](fonts.md)
 
 ## GitHub側の設定
 

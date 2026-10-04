@@ -45,4 +45,4 @@ HAの`state-*`、ドメイン／device_class別状態色、エネルギー色、
 
 本文は16pxを基準としますが、補助テキストは14px、一部の小さな注記は12pxです。標準コンポーネント内の固定px指定は完全には変更できません。フォントスケールを固定しないのでHAの文字サイズ設定と併用できます。
 
-Noto Sans JPは[Stylesheetリソース](fonts.md)としてGoogle Fontsから読み込みます。端末のOS書体への優先フォールバックは廃止しています。読み込み中・失敗時・未収録文字の代替として汎用`sans-serif`は残します。
+Noto Sans JPは[DADSのStylesheetリソース](fonts.md)を通じてGoogle Fontsから読み込みます。`font-family`、`primary-font-family`、MDCの本文・ボタン・見出し、`md-ref-typeface-plain`／`brand`、`wa-font-family-*`も同じ書体へ揃えます。リソースのCSSがHAのbodyとhome-assistantの継承元を補正します。読み込み中・失敗時・未収録文字の代替として汎用`sans-serif`は残します。

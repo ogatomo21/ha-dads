@@ -5,6 +5,11 @@ DADS:
   card-mod-theme: DADS
 
   dads-font-family: '"Noto Sans JP", sans-serif'
+  # Material You Themeと同じ旧・新の参照先を1つの書体へ揃える。
+  font-family: var(--dads-font-family)
+  primary-font-family: var(--font-family)
+  md-ref-typeface-plain: var(--font-family)
+  md-ref-typeface-brand: var(--font-family)
   dads-radius: 8px
   dads-space: 8px
   dads-focus-yellow: "#ffd43d"
@@ -67,6 +72,13 @@ DADS:
   mdc-shape-small: var(--dads-radius)
   mdc-shape-medium: var(--dads-radius)
   mdc-typography-font-family: var(--dads-font-family)
+  mdc-typography-button-font-family: var(--font-family)
+  mdc-typography-headline6-font-family: var(--font-family)
+  mdc-typography-body1-font-family: var(--font-family)
+  mdc-typography-subtitle1-font-family: var(--font-family)
+  ha-tooltip-font-family: var(--font-family)
+  wa-font-family-body: var(--font-family)
+  wa-font-family-heading: var(--font-family)
   paper-font-common-base_-_font-family: var(--dads-font-family)
   paper-input-container-color: var(--dads-text-secondary)
   paper-input-container-input-color: var(--dads-text)
@@ -263,7 +275,6 @@ DADS:
       }
 
   card-mod-root: |
-    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap');
     :host {
       font-family: var(--dads-font-family) !important;
     }

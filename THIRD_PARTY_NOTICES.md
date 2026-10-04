@@ -48,7 +48,9 @@ Noto Sans JPはGoogle Fontsから実行時に読み込みます。フォント�
 - Upstream: https://github.com/google/fonts/tree/main/ofl/notosansjp
 - License: [SIL Open Font License 1.1](https://github.com/google/fonts/blob/main/ofl/notosansjp/OFL.txt)
 
-Google FontsのCSSをStylesheetリソースとして登録します。CSSはfonts.googleapis.com、フォント本体はfonts.gstatic.comから読み込みます。専用JSやフォントデータの同梱はありません。[設定方法](docs/fonts.md)
+DADSのフォント用CSSをStylesheetリソースとして登録します。CSSをjsDelivrから配信し、Google FontsのCSSはfonts.googleapis.com、フォント本体はfonts.gstatic.comから読み込みます。専用JSやフォントデータの同梱はありません。[設定方法](docs/fonts.md)
+
+フォント変数の対応は[Material You Theme](https://github.com/Nerwyn/material-you-theme/blob/main/themes/material_you.yaml)を参考にしています。書体はNoto Sans JPに置き換え、旧primary-font-family・MDC、Materialのtypeface、新ha-font-familyの参照先を揃えています。HAのアプリ継承補正CSSは本プロジェクトで作成しました。
 
 card-modは利用者が別途HACSから導入します。このプロジェクトにはcard-mod本体を再配布していません。
 

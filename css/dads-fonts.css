@@ -1,0 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap');
+
+/* HAのbodyはRobotoを直接指定するため、テーマ変数の変更だけでは継承元が変わらない。 */
+body,
+home-assistant {
+  font-family: var(--dads-font-family, var(--ha-font-family-body, Roboto, Noto, sans-serif));
+}

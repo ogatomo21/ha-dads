@@ -8,9 +8,10 @@ async (page) => {
   const fonts = await page.evaluate(async () => {
     const faces = await document.fonts.load('400 16px "Noto Sans JP"', '日本語ABC123');
     await document.fonts.ready;
-    return { family: getComputedStyle(document.body).fontFamily, loadedFaces: faces.length, status: document.fonts.status };
+    return { family: getComputedStyle(document.body).fontFamily, appFamily: getComputedStyle(document.querySelector('home-assistant')).fontFamily, loadedFaces: faces.length, status: document.fonts.status };
   });
   if (!fonts.family.startsWith('"Noto Sans JP"') || !fonts.loadedFaces || fonts.status !== 'loaded') throw new Error(`Webフォント読み込み: ${JSON.stringify(fonts)}`);
+  if (!fonts.appFamily.startsWith('"Noto Sans JP"')) throw new Error(`アプリのフォント継承: ${fonts.appFamily}`);
   const results = [];
   for (const mode of ['light', 'dark']) {
     await page.getByRole('combobox', { name: '配色', exact: true }).selectOption(mode);

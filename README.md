@@ -4,7 +4,7 @@
 
 **基本テーマはHACSで導入・更新できます。** card-modを追加すると、カードの余白・長いラベルの折り返し・黄色と黒のフォーカス表示などのCSS補正も有効になります。
 
-**フォントは管理画面でGoogle FontsのURLを一度追加するだけです。** 専用JS、フォントファイルのコピー、フォント用のYAML編集は不要です。[フォント設定を開く](https://my.home-assistant.io/redirect/lovelace_resources/)
+**フォントは管理画面でDADSのCSS URLを一度追加するだけです。** Google Fontsを読み込み、HAのアプリ全体のフォント継承も補正します。専用JS、フォントファイルのコピー、フォント用のYAML編集は不要です。[フォント設定を開く](https://my.home-assistant.io/redirect/lovelace_resources/)
 
 [![HACSでDADS Themeを開く](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=ogatomo21&repository=ha-dads&category=theme)
 
@@ -33,19 +33,21 @@ frontend:
 
 HACSの標準一覧への掲載は別の申請が必要です。掲載前は上記のカスタムリポジトリ登録を利用します。[公式の登録手順](https://www.hacs.xyz/docs/faq/custom_repositories/)
 
-### 3. Google Fontsを一度登録してDADSを選択
+### 3. フォント用CSSを一度登録してDADSを選択
 
 1. [ダッシュボードのリソース](https://my.home-assistant.io/redirect/lovelace_resources/)を開き、**リソースを追加**を押します。
 2. 次のURLを貼り、種類を **Stylesheet（スタイルシート）** にして保存します。
 3. ブラウザーを強制再読み込みして、一度ダッシュボードを開きます。フォント登録のためのHA再起動は不要です。
 
 ```text
-https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap
+https://cdn.jsdelivr.net/gh/ogatomo21/ha-dads@main/css/dads-fonts.css
 ```
 
 プロフィールのテーマを **DADS** に変更し、モードを「ライト」「ダーク」またはシステム設定への追従にします。基本の配色・書体・カード形状はこれで適用されます。
 
 フォントは端末ごと・カードごとに登録する必要はありません。ダッシュボードで読み込んだ後は同じ画面セッションのサイドバー・設定画面・詳細ダイアログも利用できます。設定画面へ直接アクセスした場合などの制約と、以前のモジュール版からの移行は[フォント設定](docs/fonts.md)に記載しています。
+
+以前Google FontsのCSS URLを直接登録した場合は、上記のDADS CSS URLへ置き換えます。フォントデータの読み込みだけでは、Robotoを直接指定するHAの本文は変わりません。この変更をGitHubへpushした後に上記URLを利用できます。
 
 HACSはダウンロード後にテーマを再読み込みします。選択肢に出ない場合は、開発者ツールのアクションで`frontend.reload_themes`を実行し、ページを再読み込みしてください。
 

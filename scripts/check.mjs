@@ -62,6 +62,7 @@ export async function checkProject() {
   assert.deepEqual(themeFiles, [manifest.filename], 'HACSの管理対象はテーマYAML 1つ');
   const theme = await loadTheme();
   assert.equal(theme['dads-font-family'], '"Noto Sans JP", sans-serif');
+  postcss.parse(await readFile(path.join(root, 'css/dads-fonts.css'), 'utf8'));
   assert.equal(theme['card-mod-theme'], 'DADS');
   assert.deepEqual(Object.keys(theme.modes).sort(), ['dark', 'light']);
   // State色を包括的に上書きすると、警報・照明・空調の意味が変わってしまう。
